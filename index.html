@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7th Semester IT Courses</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+        
+        .course-list {
+            list-style-type: none;
+            padding: 0;
+        }
+        
+        .course-list li {
+            background-color: #fff;
+            margin-bottom: 10px;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        
+        .course-list a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        
+        .course-list a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>7th Semester IT Courses</h1>
+    <ul class="course-list" id="courseList">
+
+    </ul>
+
+    <script>
+        const courses = [{
+            id: 1,
+            title: "Elective Power Quality"
+        }, {
+            id: 2,
+            title: "Internet Web Technology"
+        }, {
+            id: 3,
+            title: "Blockchain Technology"
+        }, {
+            id: 4,
+            title: "Artificial Intelligence"
+        }, {
+            id: 5,
+            title: "Evolutionary Mobile Computing"
+        }, {
+            id: 6,
+            title: "Algorithm in Bioinformatics"
+        }, {
+            id: 7,
+            title: "Computer Vision"
+        }, {
+            id: 8,
+            title: "Internet Web Technology Lab"
+        }, {
+            id: 9,
+            title: "Tech Writing"
+        }];
+
+        const courseList = document.getElementById('courseList');
+
+        courses.forEach(course => {
+            const li = document.createElement('li');
+            const a = document.createElement('a');
+            a.href = `Page${course.id}.html`;
+            a.textContent = course.title;
+            li.appendChild(a);
+            courseList.appendChild(li);
+        });
+    </script>
+</body>
+
+</html>
